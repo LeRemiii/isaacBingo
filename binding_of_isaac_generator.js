@@ -288,7 +288,7 @@ extraHardChallenges = [
   { name: "Kill Delirium with a bomb", types: ["beatDelirium","killEnemyBomb"] },
 ];
 
-bingoList[4] = extraHardChallenges
+bingoList[4] = extraHardChallenges;
 
 //TYPES
 //bombShopkeepers, killBossBasement, getCards, syringe, getHeartContainers, buyShop, killChampion, getPickups, getPills, getOrbital,
