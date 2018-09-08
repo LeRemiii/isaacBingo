@@ -30,7 +30,7 @@ bingoGenerator = function (bingoList, opts) {
     var randIndex = 0;
     
     for (var i = 1; i <= 25; i++) {
-        if (i in easyTiles) {
+        if (easyTiles.indexOf(i) > -1) {
             randIndex = Math.floor(Math.random() * bingoList[1].length);
             while (isATypeAlreadyUsed(bingoList[1][randIndex],usedTypes)) { //reroll until no type is in common
                 randIndex = Math.floor(Math.random() * bingoList[1].length);
@@ -40,7 +40,7 @@ bingoGenerator = function (bingoList, opts) {
             }
             k = k + (bingoList[1][randIndex].types).length; // moves where to add the new types
             bingoBoard[i] = bingoList[1][randIndex];
-        } else if (i in mediumTiles) {
+        } else if (mediumTiles.indexOf(i) > -1) {
             randIndex = Math.floor(Math.random() * bingoList[2].length);
             while (isATypeAlreadyUsed(bingoList[2][randIndex],usedTypes)) { //reroll until no type is in common
                 randIndex = Math.floor(Math.random() * bingoList[2].length);
@@ -50,7 +50,7 @@ bingoGenerator = function (bingoList, opts) {
             }
             k = k + (bingoList[2][randIndex].types).length; // moves where to add the new types
             bingoBoard[i] = bingoList[2][randIndex];
-        } else if (i in hardTiles) {
+        } else if (hardTiles.indexOf(i) > -1) {
             randIndex = Math.floor(Math.random() * bingoList[3].length);
             while (isATypeAlreadyUsed(bingoList[3][randIndex],usedTypes)) { //reroll until no type is in common
                 randIndex = Math.floor(Math.random() * bingoList[3].length);
